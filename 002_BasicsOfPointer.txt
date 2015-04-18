@@ -1,0 +1,43 @@
+How much space a variable will store depends upon the Data Type and Compiler.
+Usually:   	int    stores 4 bytes
+		    char   stores 1 bytes
+		    float  stores 4 bytes
+
+Pointers  - 	Pointers are variables that stores address of another variable.
+
+
+Lets assume that we have an integer variable that have block of 4 bytes. 
+int a = 73;  // It will reserve the memory of 4 bytes and lets suppose it stores at address 1206
+
+Variable	    Address		      Value of Variable
+a		        1206		      73 		 
+
+
+Now we declare a variable whose type is pointer to Integer. Lets assume the variable is ptr. 
+This variable will store the address of variable "a" as its data type is pointers to Integer. 
+P itself will also take some memory, let it be at address 3372 and it will also be of 4 bytes.
+
+Variable	Address		Value of Variable
+ptr		    3372		1206 		 
+
+SYNTAX:
+
+int *ptr; //  Pointer variable that should point to another variable. ptr is now pointer variable that points to an Integer 
+							and stores the address of that variable.
+
+ptr = &a	// Storing address of a in ptr. ampersent (&) gives address of that variable, ie variable "a". 
+						 That also mean that ptr will be equal to 1206
+
+NOTE: ampersent (&) gives address of that variable
+
+printf(a);       //  Output:    73
+printf(&a);      //  Output:    1206
+printf(ptr);     //  Output:    1206
+printf(&ptr);    //  Output:    3372
+printf(*ptr);    //  Output:    73     // Gives us the value at the location that it points to. As it points to variable "a". 
+																						The value will be 73. This concept is called Dereferncing.
+
+
+
+
+
